@@ -24,7 +24,7 @@ Choose either **MSCoreManager** (recommended) or **Manual UE4SS Installation** b
    - Paste in `https://github.com/Elvenide/MainSequencePowerQoL` to install automatically from GitHub Releases (MSCoreManager uses `manifest.txt` and **$(System.Collections.Hashtable.ZipBase)-v<version>.zip**).
    - *(Alternatively, if installing from a local archive in MSCoreManager, download **$(System.Collections.Hashtable.ZipBase)-v<version>.zip** from [github.com/Elvenide/MainSequencePowerQoL/releases](https://github.com/Elvenide/MainSequencePowerQoL/releases).)*
 3. **Launch Main Sequence**:
-   - **Elvenide's Power QoL** will automatically create/update `MainSequencePowerQoL\config.json` with default keybinds on first launch.
+   - **Elvenide's Power QoL** will automatically create/update `ElvenidesPowerQoL\config.json` with default keybinds on first launch.
    - Open **Settings → Controls** at any time to rebind hotkeys.
 
 ### Option 2: Manual UE4SS Installation
@@ -44,24 +44,24 @@ Choose either **MSCoreManager** (recommended) or **Manual UE4SS Installation** b
      ```
 2. **Install Elvenide's Power QoL**:
    - Download **$(System.Collections.Hashtable.ZipBase)-v<version>.zip** from [github.com/Elvenide/MainSequencePowerQoL/releases](https://github.com/Elvenide/MainSequencePowerQoL/releases).
-   - Open the zip, navigate into its `Mods\` folder, and copy the `MainSequencePowerQoL` folder into:
+   - Open the zip, navigate into its `Mods\` folder, and copy the `ElvenidesPowerQoL` folder into:
      ```
-     Main Sequence\Windows\MainSequence\Binaries\Win64\ue4ss\Mods\MainSequencePowerQoL\
+     Main Sequence\Windows\MainSequence\Binaries\Win64\ue4ss\Mods\ElvenidesPowerQoL\
      ```
-     *(You can safely leave `mscore.mod` inside `MainSequencePowerQoL\`—UE4SS ignores it.)*
-   - Ensure `MainSequencePowerQoL\enabled.txt` exists (an empty file is fine).
-   - Open `ue4ss\Mods\mods.txt` and add `MainSequencePowerQoL : 1` **above** `Keybinds : 1`:
+     *(You can safely leave `mscore.mod` inside `ElvenidesPowerQoL\`—UE4SS ignores it.)*
+   - Ensure `ElvenidesPowerQoL\enabled.txt` exists (an empty file is fine).
+   - Open `ue4ss\Mods\mods.txt` and add `ElvenidesPowerQoL : 1` **above** `Keybinds : 1`:
      ```ini
-     MainSequencePowerQoL : 1
+     ElvenidesPowerQoL : 1
 
      ; Built-in keybinds, do not move up!
      Keybinds : 1
      ```
 3. **Launch Main Sequence**:
-   - **Elvenide's Power QoL** will automatically create/update `MainSequencePowerQoL\config.json` with default keybinds on first launch.
+   - **Elvenide's Power QoL** will automatically create/update `ElvenidesPowerQoL\config.json` with default keybinds on first launch.
    - Open **Settings → Controls** at any time to rebind hotkeys.
 
 ## Uninstalling
 
-- Remove or rename `MainSequencePowerQoL\enabled.txt` (or delete the `MainSequencePowerQoL` folder and remove `MainSequencePowerQoL : 1` from `mods.txt`).
+- Remove or rename `ElvenidesPowerQoL\enabled.txt` (or delete the `ElvenidesPowerQoL` folder and remove `ElvenidesPowerQoL : 1` from `mods.txt`).
 - Your saves remain completely intact with no missing-mod dependencies.

@@ -32,7 +32,7 @@ Quickly check your station's power grid from anywhere inside a space station and
 ### Configuration
 
 - **In-Game**: Open **Settings → Controls** and look for **Power Overview** to rebind the key, revert to default (`P`), or clear the binding.
-- **Config File**: Stored in `MainSequencePowerQoL/config.json` under `"PowerOverviewKey"`.
+- **Config File**: Stored in `ElvenidesPowerQoL/config.json` under `"PowerOverviewKey"`.
 
 ## Designer Power Stats
 
