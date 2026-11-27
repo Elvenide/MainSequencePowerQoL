@@ -482,9 +482,18 @@ end
 -- Feature Lifecycle
 --------------------------------------------------------------------------------
 
+local HudIndicator = require("hud_key_indicator").Create({
+    Kind       = "Power",
+    ConfigKey  = "PowerOverviewKey",
+    DefaultKey = DEFAULT_KEY,
+})
+
 Feature.WatchWidgets = {
     WBP_PowerOverview_C = function(widget)
         UpdateOverviewBars(widget)
+    end,
+    WBP_CharacterHUD_C = function(hud)
+        HudIndicator.EnsureForHud(hud)
     end,
 }
 
@@ -498,12 +507,14 @@ function Feature.Init()
         OnPress                = TogglePowerOverview,
         OnChanged              = function()
             SyncIMCSystemBinding(false)
+            HudIndicator.UpdateKeyText()
         end,
     })
     SyncIMCSystemBinding(false)
 end
 
 function Feature.RegisterHooks()
+    HudIndicator.RegisterHooks()
     local r1 = Core.TryRegisterHook(
         "PowerOverview_SetupWidget",
         "/Game/Blueprints/Widgets/Windows/WBP_PowerOverview.WBP_PowerOverview_C:SetupWidget",
